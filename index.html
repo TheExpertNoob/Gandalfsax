@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Remember to include jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+<style>
+/* Style the video: 100% width and height to cover the entire window */
+#videoPlayer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  }
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  display: flex; /* none */
+  flex-direction: row;
+  justify-content: space-around;
+  }
+p, h2 {
+  text-align: left;
+  font-size: smaller;
+  }
+.row{
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  }
+.card {
+  /*float: left;*/
+  max-width: 100%;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  margin-bottom: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: 0;
+  flex-basis: 0%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  }
+img {
+  padding: 0;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+a {
+  text-decoration: none;
+  color: #f1f1f1;
+  }
+</style>
+</head>
+<body>
+
+<button id="myBtn" onclick="myFunction()">
+<video autoplay loop id="videoPlayer">
+  <source src="videos/video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</button>
+
+<script>
+var video = document.getElementById("videoPlayer");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+</script>
+
+<div class="content">
+  <div class="row">
+	<div class="card">
+	  <p>
+	  <img src="https://readme-typing-svg.demolab.com?font=Montserrat&weight=500&pause=1000&color=FFFFFF&center=true&vCenter=true&random=true&width=200&lines=No+one+survives." alt="Typing SVG" />
+	  </p>
+	</div>
+</div>
+
+</body>
+</html>
